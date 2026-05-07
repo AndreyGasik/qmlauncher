@@ -1,10 +1,14 @@
 # QM Launcher
 
+# QM Launcher
+
 Лаунчер для быстрого запуска скриптов и программ (AppImage, .py, .sh, .fish, .exe) с графическим интерфейсом на QML и Kirigami.
 
 ## Скачать готовый бинарник
 
-Перейдите в раздел **[Releases](https://github.com/ТВОЙ_НИК/qmlauncher/releases)** и скачайте файл `QMLauncher`.
+**Последняя версия:** [QMLauncher (110 MB)](https://github.com/AndreyGasik/qmlauncher/releases/download/v1.0/QMLauncher)
+
+*Перейдите в раздел [Releases](https://github.com/AndreyGasik/qmlauncher/releases) для альтернативной загрузки и исходных кодов.*
 
 **Запуск:**
 ```bash
