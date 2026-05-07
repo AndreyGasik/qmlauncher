@@ -11,6 +11,7 @@
 <img width="387" height="557" alt="Снимок экрана_20260507_200023" src="https://github.com/user-attachments/assets/97660f46-5907-48ec-b998-30114f0599e3" />
 
 **Запуск:**
+двойным щелчком или
 ```bash
 chmod +x QMLauncher
 ./QMLauncher
