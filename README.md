@@ -1,33 +1,105 @@
 # QM Launcher
 
-Лаунчер для быстрого запуска скриптов и программ (AppImage, .py, .sh, .fish, .exe) с графическим интерфейсом на QML и Kirigami.
+[English](#english) | [Русский](#русский)
 
-Возможности: Быстрый запуск из любого места, закрывается при запуске приложения из списка или
-смене фокуса, эффекты прозрачности, анимация, перетаскивание мышью пунктов и самого окна,
-переименование из контекстного меню мыши или изменение цвета добавленных пунктов, запуск терминала для скриптов( чекбокс в основном окне ). 
+---
 
-## Скачать готовый бинарник
+## English
 
-**Последняя версия:** [QMLauncher (110 MB)](https://github.com/AndreyGasik/qmlauncher/releases/download/v1.0/QMLauncher)
+A small QML/Kirigami launcher for scripts and programs: AppImage, `.py`, `.sh`, `.fish`, `.exe`. One compact panel always at hand — it hides itself when an item is launched or when focus leaves the panel.
 
-*Перейдите в раздел [Releases](https://github.com/AndreyGasik/qmlauncher/releases) для альтернативной загрузки и исходных кодов.*
-<img width="337" height="496" alt="Снимок экрана_20260507_200043" src="https://github.com/user-attachments/assets/240cc6d3-6fa9-4b24-9e4d-1f297e214ff3" /> <img width="387" height="557" alt="Снимок экрана_20260507_200023" src="https://github.com/user-attachments/assets/97660f46-5907-48ec-b998-30114f0599e3" />
+PyQt6 + Kirigami, Linux.
 
+<p align="center">
+  <img src="docs/screenshots/qmlauncher.png" width="40%" alt="QM Launcher" />
+</p>
 
-**Запуск:**
-щелчком мыши или:
+### Features
+
+- **Quick launch** — AppImage, `.py`, `.sh`, `.fish`, `.exe`; scripts can run in a terminal (checkbox «Terminal for SH/FISH»)
+- **Self-hiding** — closes after launching an item or when it loses focus
+- **Drag & drop** — reorder items with the mouse, drag the panel itself around the screen
+- **Per-item look** — rename from the context menu, set a custom color for each item
+- **Transparency and animations** — translucent panel, KWin blur on Plasma, smooth hover effects
+- **Theme follows the system color scheme** (Kirigami)
+- **Plain JSON config** — `launcher_config.json` is created next to the script on first run; items are usually managed from the UI (+ button)
+
+### Run
+
+From source:
+
 ```bash
-chmod +x QMLauncher
-./QMLauncher
+# Arch / CachyOS
+sudo pacman -S python-pyqt6 kirigami
+python3 start.py
+```
 
+Or grab the ready **AppImage** from [Releases](../../releases) — no Python needed:
 
-Требования к системе
-Установленные пакеты: python-pyqt6, kirigami
-(для Arch/CachyOS: sudo pacman -S python-pyqt6 kirigami)
+```bash
+chmod +x QMLauncher-1.1.0-x86_64.AppImage
+./QMLauncher-1.1.0-x86_64.AppImage
+```
 
-Настройка
-При первом запуске создаётся файл конфигурации ~/.config/qm_launcher_config.json — редактируйте его
-или добавляйте элементы через интерфейс (кнопка ➕).
+### Dependencies (from source)
 
-Лицензия
-MIT
+| Package | Purpose |
+|---|---|
+| python-pyqt6 | UI runtime |
+| kirigami | QML components and theming |
+
+Blur works under KWin (Plasma); on other WMs the panel is simply transparent.
+
+---
+
+## Русский
+
+Компактный лаунчер на QML/Kirigami для быстрого запуска скриптов и программ: AppImage, `.py`, `.sh`, `.fish`, `.exe`. Панель всегда под рукой и сама прячется после запуска пункта или при смене фокуса.
+
+PyQt6 + Kirigami, Linux.
+
+<p align="center">
+  <img src="docs/screenshots/qmlauncher.png" width="40%" alt="QM Launcher" />
+</p>
+
+### Возможности
+
+- **Быстрый запуск** — AppImage, `.py`, `.sh`, `.fish`, `.exe`; для скриптов есть галочка «Терминал для SH/FISH» (запуск в терминале).
+- **Сам скрывается** — закрывается после запуска пункта или при переключении фокуса на другое окно.
+- **Перетаскивание** — пункты меняются местами мышью, панель можно таскать по экрану.
+- **Внешний вид пунктов** — переименование из контекстного меню, свой цвет для каждого пункта.
+- **Прозрачность и анимации** — полупрозрачная панель, размытие фона через KWin (Plasma), плавный hover.
+- **Тема следует системной цветовой схеме** (Kirigami).
+- **Простой JSON-конфиг** — `launcher_config.json` создаётся рядом со скриптом при первом запуске; обычно пункты добавляются через интерфейс (кнопка ➕).
+
+### Запуск
+
+Из исходников:
+
+```bash
+# Arch / CachyOS
+sudo pacman -S python-pyqt6 kirigami
+python3 start.py
+```
+
+Или возьмите готовый **AppImage** из [Releases](../../releases) — Python не нужен:
+
+```bash
+chmod +x QMLauncher-1.1.0-x86_64.AppImage
+./QMLauncher-1.1.0-x86_64.AppImage
+```
+
+### Зависимости (для запуска из исходников)
+
+| Пакет | Назначение |
+|---|---|
+| python-pyqt6 | среда выполнения |
+| kirigami | QML-компоненты и тема |
+
+Размытие работает под KWin (Plasma); в других WM панель просто полупрозрачная.
+
+---
+
+## License / Лицензия
+
+[MIT](LICENSE)
