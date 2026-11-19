@@ -5,7 +5,8 @@
 PyQt6 + Kirigami, Linux.
 
 <p align="center">
-  <img src="docs/screenshots/qmlauncher.png" width="40%" alt="QM Launcher" />
+  <img src="docs/screenshots/qmlauncher-main.png" width="40%" alt="Список пунктов" />
+  <img src="docs/screenshots/qmlauncher-context.png" width="40%" alt="Контекстное меню пункта" />
 </p>
 
 ## Возможности
